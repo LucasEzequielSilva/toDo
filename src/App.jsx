@@ -5,10 +5,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function TodoList() {
-  let {addTask, deleteTask} = tasksActions
+
+  let { addTask, deleteTask } = tasksActions
   const dispatch = useDispatch();
-  const tasks = useSelector(state => state.tasks.tasks);
-  console.log(tasks)
+  const tasks = useSelector(store => store.tasks.tasks);
   const inputRef = useRef("");
   
   const crearTask = (e) => {
